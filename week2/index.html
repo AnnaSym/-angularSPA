@@ -10,16 +10,7 @@
         color: red;
         font-size: 1.2em;
       }
-      li {
-        margin-bottom: 7px;
-        font-size: 1.2em;
-      }
-      li > button {
-        margin-left: 6px;
-      }
-      button > span {
-        color: green;
-      }
+      
     </style>
   </head>
 <body ng-app="ShoppingListCheckOff">
@@ -35,8 +26,8 @@
      <ul>
        <li ng-repeat="item in ArleadyBoughtItems.items">
          Buy {{ item.quantity }} {{ item.name }}
-         <button ng-click="ArleadyBoughtItems.moveItem($index, item)" class="btn btn-default">
-           <span class="glyphicon glyphicon-ok"></span> Bought
+         <button ng-click="ArleadyBoughtItems.moveItem($index, item)" >
+            Bought
          </button>
        </li>
      </ul>
